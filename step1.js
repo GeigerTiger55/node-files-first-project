@@ -2,10 +2,10 @@
 
 const fsP = require("fs/promises");
 
-/** This function takes a single parameter that is a path. It prints the 
- * contents of the file located at that path. 
+/** This function takes a single parameter that is a path. It prints the
+ * contents of the file located at that path.
  * */
-async function cat(file){
+async function cat(file) {
   try {
     let contents = await fsP.readFile(file, "utf8");
     console.log("file contents", contents);
@@ -15,7 +15,6 @@ async function cat(file){
     console.log(`Error: ${err}`);
     process.exit(1);
   }
-
 }
 
 const argv = process.argv;
